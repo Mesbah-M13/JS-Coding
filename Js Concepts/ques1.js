@@ -20,3 +20,5 @@ function findLastElement(params) {
 //   return lastElem;
 // }
 console.log(findLastElement(myArr));
+
+
