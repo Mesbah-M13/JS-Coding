@@ -1,6 +1,6 @@
 // Create a function that takes an array containing both numbers and strings, and returns a new array containing only the string values
 
-const newArr = [23,'Hi',40,'Welcome']
+const newArr = [23, "Hi", 40, "Welcome", 34, "Bangladesh"];
 
 // way 1
 // let arrayWithStr =[]
@@ -17,6 +17,15 @@ const newArr = [23,'Hi',40,'Welcome']
 // console.log(checkArr(newArr));
 
 // way 2 🌟 Recomended
-const filteredArray = newArr.filter( elem => typeof(elem) === 'string')
+const filteredArray = newArr.filter((elem) => typeof elem === "string");
 
-console.log(filteredArray);
+// console.log(filteredArray);
+
+// wayy 3
+const resultFilterArr = newArr.filter((ele) => {
+  if (typeof ele === "string") {
+    return true;
+  }
+  return false;
+});
+console.log(resultFilterArr);
