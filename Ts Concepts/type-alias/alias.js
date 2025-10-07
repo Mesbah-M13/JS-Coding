@@ -3,8 +3,16 @@
 ✅To create a type alias, we need to use the type keyword.
 
 */
-function sayHi(name1) {
-    return "Hello ".concat(name1('Himel'));
+var userInfo = {
+    name: 'Himel',
+    age: 30,
+};
+function login(userData) {
+    return userData;
 }
-var greet = function (name) { return "".concat(name); };
-console.log(sayHi(greet));
+console.log(login({
+    name: 'M. Himel',
+    age: 30,
+}));
+var userId = 123;
+console.log(typeof (userId));

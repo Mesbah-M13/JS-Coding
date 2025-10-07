@@ -28,6 +28,7 @@ console.log(group) // "Adult"
 
 // function type alias
 
+/*
 type GreetMsgToPerson = (name: string) => string
 
 function sayHi(name1:GreetMsgToPerson) {
@@ -35,3 +36,29 @@ function sayHi(name1:GreetMsgToPerson) {
 }
 const greet: GreetMsgToPerson = name => `${name}`
 console.log(sayHi(greet));
+*/
+type User={
+  name: string,
+  age:number,
+  address ?: string,
+}
+
+const userInfo : User ={
+  name: 'Himel',
+  age : 30,
+}
+
+function login( userData : User ): User {
+  return userData
+}
+
+console.log(login({
+  name:'M. Himel',
+  age:30,
+}));
+
+type ID = number | string // | --> pipe symbol is for union type
+
+const userId: ID = 123;
+
+console.log(typeof(userId));
