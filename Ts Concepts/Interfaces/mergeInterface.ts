@@ -16,3 +16,16 @@ const studentDetails : StudentInfo ={
 }
 
 console.log(studentDetails);
+
+
+// type vs interface
+
+/*
+
+For primitives types use type 
+  ✅ type EvenNumber = number
+  ✅ type address = string
+  
+Interface is for the object
+
+*/
