@@ -2,7 +2,7 @@ const http = require("http");
 const fs = require("fs");
 
 const server = http.createServer((req, res) => {
-  console.log(req.url, req.method, req.headers);
+  console.log(req.url, req.method, /*req.headers*/);
   if (req.url === "/") {
     res.setHeader("Content-Type", "text/html");
     res.write("<html>");
@@ -28,6 +28,9 @@ const server = http.createServer((req, res) => {
     req.url.toLowerCase() === "/submit-details" &&
     req.method === "POST"
   ) {
+
+    req.on('data',(chunk)=> console.log(chunk))
+
     fs.writeFileSync("submitted-result.txt", "M. Himel");
 
     res.statusCode = 302;
